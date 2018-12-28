@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="redColor">Toodoo Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @toodoo_items.each do |toodoo_item| %>
+      <tr>
+        <td><%= toodoo_item.description %></td>
+        <td><%= link_to 'Show', toodoo_item %></td>
+        <td><%= link_to 'Edit', edit_toodoo_item_path(toodoo_item) %></td>
+        <td><%= link_to 'Destroy', toodoo_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Toodoo Item', new_toodoo_item_path %>

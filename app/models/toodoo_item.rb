@@ -1,0 +1,2 @@
+class ToodooItem < ApplicationRecord
+end
